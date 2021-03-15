@@ -1,38 +1,70 @@
-.App {
+.container {
+  align-items: center;
+  margin: auto;
+  max-width: 600px;
+  height: auto;
+  padding: 2rem;
+  margin-top: 7rem; 
+  border: 1px solid #faf8f8;
+  border-radius: 10px;
+  /* box-shadow: 2px 6px #e9e3e3; */
+  background-color: #ffffff
+}
+
+.container .title {
+  font-weight: 600;
+  font-size: 40px;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container .todo-wrap {
+  border-radius: 10px;
+  box-shadow: 2px 6px 10px #d1d1d1;
+  padding: 3rem 6rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.input-form {
+  width: 100%
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.input-form .input-box {
+  border: 1px solid #d60b0b ;
+  box-shadow: 1px 2px  #201c1c;
+  height: 30px;
+  margin-right: 2rem;
+  width: 70%;
+}
+
+.input-form .add-btn {
+  padding: 5px 30px;
+  background-color: rgb(61, 101, 235);
+  color:#ffffff;
+  border: none;
+  border-radius: 2px;
+}
+
+.todo-list {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 25px;
+  margin-top: 2rem;
+  padding-left: 0;
+  /* border: 1px solid #585757; */
 }
 
-.App-link {
-  color: #61dafb;
+.todo-list .todo-items {
+  list-style: none;
+  border: 1px solid #585757;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-items .todo-item {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
 }
+
+.todo-items .todo-item:not(:last-of-type) {
+  border-bottom: 1px solid #585757;
+}
+
+
