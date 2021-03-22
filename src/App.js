@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Todo from './Todo';
+import Todos from './Todos';
 import './App.css';
 import { v4 as uuidv4 } from 'uuid';
 import TodoForm from './TodoForm';
@@ -19,7 +19,7 @@ function App() {
       <h1 className="title">Basic Todo App</h1>
       <div className="todo-wrap">
         <TodoForm setTodoList={setTodoList} />
-        <Todo todoList={todoList} setTodoList={setTodoList} />
+        <Todos todoList={todoList} setTodoList={setTodoList} />
       </div>
     </div> 
   );

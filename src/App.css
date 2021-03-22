@@ -12,8 +12,8 @@
 }
 
 .container .title {
-  font-weight: 600;
-  font-size: 40px;
+  font-weight: 800;
+  font-size: 60px;
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -22,6 +22,8 @@
   border-radius: 10px;
   box-shadow: 2px 6px 10px #d1d1d1;
   padding: 3rem 6rem;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 .input-form {
@@ -29,8 +31,8 @@
 }
 
 .input-form .input-box {
-  border: 1px solid #d60b0b ;
-  box-shadow: 1px 2px  #201c1c;
+  border: 1px solid #3d65eb ;
+  box-shadow: 1px 0.5px 7px #2f5cf0;
   height: 30px;
   margin-right: 2rem;
   width: 70%;
@@ -38,7 +40,7 @@
 
 .input-form .add-btn {
   padding: 5px 30px;
-  background-color: rgb(61, 101, 235);
+  background-color: #3d65eb;
   color:#ffffff;
   border: none;
   border-radius: 2px;
@@ -46,7 +48,7 @@
 
 .todo-list {
   align-items: center;
-  font-size: 25px;
+  /* font-size: 25px; */
   margin-top: 2rem;
   padding-left: 0;
   /* border: 1px solid #585757; */
@@ -65,6 +67,18 @@
 
 .todo-items .todo-item:not(:last-of-type) {
   border-bottom: 1px solid #585757;
+}
+
+.todo-item .done-btn {
+  padding: 3px 5px;
+  border: 1px solid #3d65eb;
+  color: #3d65eb;
+}
+
+.todo-item .check-btn {
+  color: #008000;
+  border: none;
+  text-shadow: 1px 1px 8px #037203;
 }
 
 

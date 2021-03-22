@@ -1,11 +1,21 @@
 import React from 'react';
 import Button from './Button';
 
-const Todo = ({todoList, setTodoList}) => {
+const Todos = ({todoList, setTodoList}) => {
 
    const handleChangeStatus = (todo) => {
         const payload = {...todo, status: "completed"}
-    }
+        setTodoList((currentTodoList) => {
+            const todoIndex = currentTodoList.findIndex((data) => {
+                return data.id === payload.id
+            });
+            
+            const newArr = [...currentTodoList];
+            newArr.splice(todoIndex, 1, payload);
+
+            return newArr;
+        })
+    };
 
     return (
         <div className="todo-list">
@@ -17,7 +27,7 @@ const Todo = ({todoList, setTodoList}) => {
                             <span className="item-status">
                                 {todo.status === 'pending' ?
                                     <Button buttonAction= {() => handleChangeStatus(todo)} buttonText="Done" className="done-btn"/> :
-                                    <i className="fas fa-check" />
+                                    <i className="fas fa-check check-btn" />
                                 }
                             </span>
                         </li>
@@ -25,7 +35,7 @@ const Todo = ({todoList, setTodoList}) => {
                 })}
             </ol>
         </div>
-    )
+    );
 }   
 
-export default Todo;
+export default Todos;
