@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Todos from './Todos';
 import './App.css';
 import { v4 as uuidv4 } from 'uuid';
@@ -12,7 +12,13 @@ const todos = [
 
 
 function App() {
-  const [todoList, setTodoList] = useState(todos); 
+  const [todoList, setTodoList] = useState(todos);
+
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem('todotList'));
+    localStorage.setItem('todoList', JSON.stringify(todoList));
+    // setContactList(contacts);
+  }, [todoList]);
 
   return (
     <div className="container">
